@@ -2,3 +2,5 @@
 .idea
 *.csv
 *.h5
+.xml
+.iml
