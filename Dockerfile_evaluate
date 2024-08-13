@@ -1,0 +1,15 @@
+#Use tensorflow with GPU support as base image
+FROM tensorflow/tensorflow:2.15.0-gpu
+
+#Set working directory to app
+WORKDIR /app
+
+#Copy contents of current repository
+COPY . /app
+
+#Install packages
+RUN pip install -r requirements2.txt
+
+#Execute CNN
+CMD ["python", "model_implementation/evaluating_model.py"]
+#CMD ["python", "model_implementation/model_misclassified.py"]

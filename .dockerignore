@@ -1,0 +1,7 @@
+*.csv
+/venv
+/models
+/epoch_history
+/imagescraper/imagescraper
+/imagescraper/notebook
+/imagescraper/scrapy.cfg

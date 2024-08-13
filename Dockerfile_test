@@ -1,0 +1,14 @@
+#Use tensorflow with GPU support as base image
+FROM tensorflow/tensorflow:2.15.0-gpu
+
+#Set working directory to app
+WORKDIR /app
+
+#Copy contents of current repository
+COPY . /app
+
+#Install packages
+RUN pip install -r requirements_test.txt
+
+#Execute CNN
+CMD ["python", "docker_testfiles/docker_testing.py"]
